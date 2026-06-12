@@ -41,6 +41,7 @@ body {
     width: 20px;
     height: 20px;
 }
+
 .header__logo-text {
     font-size: 26px;
 }
@@ -94,14 +95,47 @@ body {
     color: white;
     cursor: pointer;
     transition: 0.3s;
+    font: inherit;
 }
 
 .hero__btn:hover {
     opacity: 0.8;
 }
 
-.hero__visual img {
-    max-width: 400px;
+.hero__image {
+    max-width: 600px;
     width: 100%;
     border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================
+   MEDIA QUERIES
+   ========================= */
+
+
+@media (max-width: 768px) {
+    .hero__inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero__title {
+        font-size: 36px;
+    }
+
+    .hero__image {
+        max-width: 100%;
+    }
 }
