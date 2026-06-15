@@ -227,6 +227,65 @@ body {
     line-height: 1.5;
 }
 
+/* contact */
+.contact {
+    padding: 80px 0;
+}
+
+.contact__title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contact__form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact__input,
+.contact__textarea,
+.contact__select {
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font: inherit;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact__input:focus,
+.contact__textarea:focus,
+.contact__select:focus {
+    border-color: #000;
+}
+
+.contact__textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact__btn {
+    padding: 12px 20px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.contact__btn:hover {
+    opacity: 0.8;
+}
+
+.contact__input::placeholder,
+.contact__textarea::placeholder {
+    color: #aaa;
+}
 
 /* =========================
    MEDIA QUERIES
