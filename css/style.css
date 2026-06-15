@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
 }
@@ -287,6 +291,44 @@ body {
     color: #aaa;
 }
 
+/* footer */
+
+.footer {
+    padding: 40px 0;
+    border-top: 1px solid #eee;
+    margin-top: 60px;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer__text {
+    font-size: 14px;
+    color: #777;
+}
+
+.footer__links {
+    display: flex;
+    gap: 16px;
+}
+
+.footer__links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer__links a:hover {
+    color: black;
+}
+
+
+
 /* =========================
    MEDIA QUERIES
    ========================= */
@@ -313,6 +355,11 @@ body {
 
     .about__photo {
         max-width: 280px;
+    }
+
+    .footer__inner {
+        flex-direction: column;
+        text-align: center;
     }
 }
 
