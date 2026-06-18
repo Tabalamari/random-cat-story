@@ -333,7 +333,45 @@ body {
     color: black;
 }
 
+/* lightbox */
 
+
+.lightbox {
+    display: none;
+
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.9);
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2000;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox__image {
+    max-width: 90%;
+    max-height: 90vh;
+
+    border-radius: 12px;
+}
+
+.lightbox__close {
+    position: absolute;
+
+    top: 30px;
+    right: 40px;
+
+    font-size: 40px;
+    color: white;
+
+    cursor: pointer;
+}
 
 /* =========================
    MEDIA QUERIES
