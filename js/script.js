@@ -1,3 +1,5 @@
+// Anchor navigation
+
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener("click", function (e) {
         e.preventDefault();
@@ -41,7 +43,7 @@ window.addEventListener("scroll", () => {
 
 // Lightbox
 
-// Знаходимо всі картинки Gallery:
+// Select all images in the gallery section:
 const galleryImages =
     document.querySelectorAll(".gallery__item img");
 
@@ -54,7 +56,7 @@ const lightboxImage =
 const lightboxClose =
     document.querySelector(".lightbox__close");
 
-// Відкриття
+// Opening full-screen image view
 galleryImages.forEach(image => {
 
     image.addEventListener("click", () => {
@@ -67,12 +69,12 @@ galleryImages.forEach(image => {
 
 });
 
-// Закриття
+// Closing full-screen image view
 lightboxClose.addEventListener("click", () => {
     lightbox.classList.remove("active");
 });
 
-// Закриття по кліку на фон
+// Close on overlay click
 lightbox.addEventListener("click", event => {
 
     if (event.target === lightbox) {
@@ -81,7 +83,7 @@ lightbox.addEventListener("click", event => {
 
 });
 
-// Закриття клавішею ESC
+// // Close on ESC key
 
 document.addEventListener("keydown", event => {
 
@@ -90,3 +92,29 @@ document.addEventListener("keydown", event => {
     }
 
 });
+
+
+// fade-in on scroll
+const fadeElements = document.querySelectorAll(".fade-in");
+
+const observer = new IntersectionObserver(
+    entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.2
+    }
+);
+
+fadeElements.forEach(element => {
+    observer.observe(element);
+});
+

@@ -373,6 +373,21 @@ body {
     cursor: pointer;
 }
 
+/* fade-in on scroll */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* =========================
    MEDIA QUERIES
    ========================= */
