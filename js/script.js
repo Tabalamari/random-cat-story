@@ -117,4 +117,8 @@ const observer = new IntersectionObserver(
 fadeElements.forEach(element => {
     observer.observe(element);
 });
-
+// unobserve
+if (entry.isIntersecting) {
+    entry.target.classList.add("visible");
+    observer.unobserve(entry.target);
+}
