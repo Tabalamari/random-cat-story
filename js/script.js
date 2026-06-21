@@ -122,3 +122,35 @@ if (entry.isIntersecting) {
     entry.target.classList.add("visible");
     observer.unobserve(entry.target);
 }
+
+// 
+const form = document.querySelector("#contact-form");
+
+form.addEventListener("submit", event => {
+
+    event.preventDefault();
+
+    const name = document.querySelector("#name").value.trim();
+    const message = document.querySelector("#message").value.trim();
+    const email = document.querySelector("#email").value.trim();
+
+    if (name === "") {
+        alert("Please enter your name");
+        return;
+    }
+
+    if (message === "") {
+        alert("Please enter a message");
+        return;
+    }
+    alert("Message sent successfully!");
+
+    if (!email.includes("@")) {
+        alert("Please enter a valid email");
+        return;
+    }
+
+});
+
+
+

@@ -146,9 +146,11 @@
         <section id="contact" class="contact fade-in">
             <div class="container">
                 <h2 class="contact__title">Contact</h2>
-                <form class="contact__form">
-                    <input type="text" placeholder="Enter your name" class="contact__input">
-                    <textarea class="contact__textarea" placeholder="Type your message"></textarea>
+                <form class="contact__form" id="contact-form">
+                    <input type="text" class="contact__input" id="name" placeholder="Enter your name">
+                    <input type="email" id="email" class="contact__input" placeholder="Enter your email">
+
+                    <textarea class="contact__textarea" id="message" placeholder="Type your message"></textarea>
 
                     <select name="country" class="contact__select">
                         <option value="ua">Ukraine</option>
