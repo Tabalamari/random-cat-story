@@ -98,12 +98,13 @@ document.addEventListener("keydown", event => {
 const fadeElements = document.querySelectorAll(".fade-in");
 
 const observer = new IntersectionObserver(
-    entries => {
+    (entries, observer) => {
 
         entries.forEach(entry => {
 
             if (entry.isIntersecting) {
                 entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
             }
 
         });
@@ -117,15 +118,16 @@ const observer = new IntersectionObserver(
 fadeElements.forEach(element => {
     observer.observe(element);
 });
-// unobserve
-if (entry.isIntersecting) {
-    entry.target.classList.add("visible");
-    observer.unobserve(entry.target);
-}
 
-// 
+
+//
+
 const form = document.querySelector("#contact-form");
 
+form.addEventListener("submit", e => {
+    e.preventDefault();
+    alert("SUBMIT WORKS");
+});
 form.addEventListener("submit", event => {
 
     event.preventDefault();
@@ -135,20 +137,27 @@ form.addEventListener("submit", event => {
     const email = document.querySelector("#email").value.trim();
 
     if (name === "") {
-        alert("Please enter your name");
+        document.querySelector("#name-error").textContent =
+            "Please enter your name";
         return;
     }
 
     if (message === "") {
-        alert("Please enter a message");
+        document.querySelector("#message-error").textContent =
+            "Please enter your message";
         return;
     }
-    alert("Message sent successfully!");
 
     if (!email.includes("@")) {
-        alert("Please enter a valid email");
-        return;
+        document.querySelector("#email-error").textContent =
+            "Please enter your email";
     }
+    // const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // if (!emailPattern.test(email)) {
+    //     alert("Please enter a valid email");
+    //     return;
+    // }
+    alert("Message sent successfully!");
 
 });
 

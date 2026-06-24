@@ -148,14 +148,15 @@
                 <h2 class="contact__title">Contact</h2>
                 <form class="contact__form" id="contact-form">
                     <input type="text" class="contact__input" id="name" placeholder="Enter your name">
+                    <p id="name-error"></p>
                     <input type="email" id="email" class="contact__input" placeholder="Enter your email">
-
+                    <p id="email-error"></p>
                     <textarea class="contact__textarea" id="message" placeholder="Type your message"></textarea>
-
-                    <select name="country" class="contact__select">
+                    <p id="message-error"></p>
+                    <!-- <select name="country" class="contact__select">
                         <option value="ua">Ukraine</option>
                         <option value="uk">United Kingdom</option>
-                    </select>
+                    </select> -->
 
                     <button class="contact__btn" type="submit">
                         Send Message
@@ -185,8 +186,8 @@
         <img class="lightbox__image" src="" alt="Full size artwork">
     </div>
 
-
     <script src="js/script.js"></script>
+
 </body>
 
 
