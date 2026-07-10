@@ -4,12 +4,16 @@
     box-sizing: border-box;
 }
 
-/* html {
+html {
     scroll-behavior: smooth;
-} */
+}
 
 body {
     font-family: Arial, sans-serif;
+    background:
+        linear-gradient(180deg,
+            #fff1e7,
+            #fcb14f);
 }
 
 .container {
@@ -26,6 +30,10 @@ body {
     background: white;
     z-index: 1000;
     border-bottom: 1px solid #eee;
+     background:
+        linear-gradient(180deg,
+            #fff1e7,
+            #fbb354);
 }
 
 .header__inner {
@@ -147,7 +155,7 @@ body {
     object-position: top;
     border-radius: 10px;
     transition: transform 0.3s ease;
-    
+
 }
 
 .gallery__item img:hover {
