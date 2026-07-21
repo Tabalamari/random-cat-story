@@ -37,7 +37,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid #eee;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     background:
         linear-gradient(180deg,
             #fff1e7,
@@ -126,7 +126,9 @@ main {
 .hero__btn {
     padding: 12px 20px;
     border: none;
+    border-radius: 10px;
     background: black;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     color: white;
     cursor: pointer;
     transition: 0.3s;
@@ -141,6 +143,7 @@ main {
     max-width: 600px;
     width: 100%;
     border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 /* gallery */
@@ -161,18 +164,23 @@ main {
     gap: 20px;
 }
 
+.gallery__item {
+    overflow: hidden;
+    border-radius: 10px;
+    filter: drop-shadow(0 10px 25px rgba(0,0,0,0.3));
+}
+
 .gallery__item img {
     width: 100%;
     height: 250px;
     object-fit: cover;
     object-position: top;
     border-radius: 10px;
-    transition: transform 0.3s ease;
-
+    transition: transform 0.5s ease;
 }
 
 .gallery__item img:hover {
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 /* about */
@@ -192,6 +200,7 @@ main {
     flex: 1;
     display: flex;
     justify-content: center;
+
 }
 
 .about__photo {
@@ -199,6 +208,7 @@ main {
     width: 100%;
     border-radius: 12px;
     object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
 }
 
 .about__content {
@@ -242,11 +252,13 @@ main {
     border-radius: 12px;
     transition: 0.3s ease;
     background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+
 }
 
 .services__card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
 }
 
 .services__card-title {
@@ -294,6 +306,7 @@ p {
     font: inherit;
     outline: none;
     transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .contact__input:focus,
@@ -315,6 +328,7 @@ p {
     cursor: pointer;
     transition: 0.3s;
     border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .contact__btn:hover {
@@ -332,9 +346,9 @@ p {
 .footer {
     position: relative;
     padding: 40px 0;
-    border-top: 1px solid #e0d5d5;
     margin-top: 60px;
     background: rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
     ;
 }
 
