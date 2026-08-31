@@ -124,10 +124,6 @@ fadeElements.forEach(element => {
 
 const form = document.querySelector("#contact-form");
 
-form.addEventListener("submit", e => {
-    e.preventDefault();
-    alert("SUBMIT WORKS");
-});
 form.addEventListener("submit", event => {
 
     event.preventDefault();
@@ -151,6 +147,7 @@ form.addEventListener("submit", event => {
     if (!email.includes("@")) {
         document.querySelector("#email-error").textContent =
             "Please enter your email";
+        return;
     }
     // const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     // if (!emailPattern.test(email)) {
@@ -158,7 +155,7 @@ form.addEventListener("submit", event => {
     //     return;
     // }
     alert("Message sent successfully!");
-
+    form.submit();
 });
 
 

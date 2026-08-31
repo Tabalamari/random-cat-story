@@ -148,12 +148,12 @@
         <section id="contact" class="contact fade-in">
             <div class="container">
                 <h2 class="contact__title">Contact</h2>
-                <form class="contact__form" id="contact-form">
-                    <input type="text" class="contact__input" id="name" placeholder="Enter your name">
+                <form action="https://formspree.io/f/xkjnwaqg" method="POST" class="contact__form" id="contact-form">
+                    <input type="text" class="contact__input" id="name" name="name" placeholder="Enter your name">
                     <p id="name-error"></p>
-                    <input type="email" id="email" class="contact__input" placeholder="Enter your email">
+                    <input type="email" name="email" id="email" class="contact__input" placeholder="Enter your email">
                     <p id="email-error"></p>
-                    <textarea class="contact__textarea" id="message" placeholder="Type your message"></textarea>
+                    <textarea class="contact__textarea" name="message" id="message" placeholder="Type your message"></textarea>
                     <p id="message-error"></p>
                     <!-- <select name="country" class="contact__select">
                         <option value="ua">Ukraine</option>
